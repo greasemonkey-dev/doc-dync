@@ -28,9 +28,23 @@ func FilterProviders(jsonData []byte, req entities.ProviderRequest) ([]entities.
 		Criteria: entities.ScoreCriteria{MinScore: req.MinScore},
 	}
 
+	// Inside FilterProviders
+	ch := make(chan []entities.Provider, len(providers))
+
 	for _, p := range providers {
-		if availabilityFilter.Match(p) && specialtyFilter.Match(p) && scoreFilter.Match(p) {
-			filteredProviders = append(filteredProviders, p)
+		go func(provider entities.Provider) {
+			if availabilityFilter.Match(provider) && specialtyFilter.Match(provider) && scoreFilter.Match(provider) {
+				ch <- []entities.Provider{provider}
+			} else {
+				ch <- nil
+			}
+		}(p)
+	}
+
+	for range providers {
+		result := <-ch
+		if result != nil {
+			filteredProviders = append(filteredProviders, result[0])
 		}
 	}
 

@@ -13,7 +13,7 @@ func IsValidScore(minScore float64) bool {
 }
 
 func IsValidSpecialties(requestedSpecialty string) bool {
-	existingSpecialties := []string{"neuropathy", "physiologist", "cardiologist", "internist"}
+	existingSpecialties := []string{"neuropathy", "physiologist", "cardiologist", "internist", "pain Assistance", "Neonatal"}
 	// Convert both lists to lowercase for case-insensitive comparison
 	requestedSpecialtyLower := strings.ToLower(requestedSpecialty)
 

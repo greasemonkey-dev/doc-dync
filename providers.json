@@ -49,6 +49,33 @@
     ]
   },
   {
+    "name": "Dr. Yana Zvezda",
+    "score": 9.8,
+    "specialties": [
+      "Neonatal"
+    ],
+    "availableDates": [
+      {
+        "from": 814172400000,
+        "to": 1634803200000
+      }
+    ]
+  },
+  {
+    "name": "Dr. Zlatan Ibrahimovic",
+    "score": 10.0,
+    "specialties": [
+      "Physiologist"
+    ],
+    "availableDates": [
+      {
+        "from": 1808982000000,
+        "to": 1808982000000
+      }
+    ]
+  },
+
+  {
     "name": "Eddie Dean",
     "score": 8.3,
     "specialties": [
@@ -79,8 +106,30 @@
     "availableDates": [
       {
         "from": 1808982000000,
-        "to": 1808982000000
+        "to": 1808986000000
       }
+    ]
+  },
+  {
+    "name": "Eddie Dean",
+    "score": 8.3,
+    "specialties": ["Pain Assistance", "Internist"],
+    "availableDates": []
+  },
+  {
+    "name": "Oy Midworld",
+    "score": 9.5,
+    "specialties": ["Neonatal"],
+    "availableDates": [
+      {"from": 814172400000, "to": 1634803200000}
+    ]
+  },
+  {
+    "name": "Randall Flagg",
+    "score": 0.1,
+    "specialties": ["Physiologist"],
+    "availableDates": [
+      {"from": 1808982000000, "to": 1808982000000}
     ]
   }
 ]
